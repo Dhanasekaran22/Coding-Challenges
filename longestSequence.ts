@@ -9,12 +9,11 @@ function removeDuplicates(arr){
 }
 
 function longSequence(arr){
-    var num:number[]=arr;
+    
     var longSequence:number[]=[];
-    var index=0,count=0;
-    var max=0;
-    for(let i=0;i<num.length-1;i++){
-        if(num[i]<num[i+1]){
+    var currentSequence:number[]=[arr[0]];
+    for(let i=0;i<arr.length-1;i++){
+        if(arr[i]<arr[i+1]){
             longSequence[index++]=num[i];
             longSequence[index++]=num[i+1];
             count++;
@@ -35,5 +34,5 @@ function longSequence(arr){
     console.log(`The numbers in ascending order are ${longSequence1}`);
     console.log(`The max value is ${longSequence1.length}`)
 }
-longSequence([45,40,0,39,40,10]);
+
 longSequence([45,40,55,0,39,110]);
