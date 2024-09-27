@@ -1,11 +1,17 @@
-function nextNum(arr) {
-    var arr1 = arr;
-    var sortarr = arr1.sort();
-    console.log(sortarr);
-    for (var i = 0; i < sortarr.length - 1; i++) {
-        if (sortarr[i + 1] - sortarr[i] != 1) {
-            console.log(sortarr[i] + 1);
+function nextNumber(currentSequence) {
+    var currentSequence = currentSequence.sort();
+    var sequenceNumber = [currentSequence[0]];
+    for (var i = 1; i <= currentSequence.length; i++) {
+        if (currentSequence[i] - currentSequence[i - 1] === 1) {
+            sequenceNumber.push(currentSequence[i]);
+        }
+        else {
+            var count = currentSequence[i] - currentSequence[i - 1];
+            for (var j = 1; j <= count; j++) {
+                sequenceNumber.push(currentSequence[i - 1] + j);
+            }
         }
     }
+    console.log(sequenceNumber);
 }
-nextNum([5, 2, 4, 3, 8]);
+nextNumber([1, 2, 6]);

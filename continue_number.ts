@@ -1,12 +1,25 @@
-function nextNum(arr){
-    var arr1:number[]=arr;
-    var sortarr=arr1.sort()
-    console.log(sortarr);
-    for(let i=0;i<sortarr.length-1;i++){
-        if(sortarr[i+1]-sortarr[i]!=1){
-            console.log(sortarr[i]+1);
+function nextNumber(currentSequence:number[]){
+    var currentSequence=currentSequence.sort();
+    var sequenceNumber:number[]=[currentSequence[0]];
+    for(let i=1;i<=currentSequence.length;i++){
+        
+        if(currentSequence[i]-currentSequence[i-1]===1){
+            sequenceNumber.push(currentSequence[i]);
+            
         }
+        else{
+            var count:number=currentSequence[i]-currentSequence[i-1];
+           
+            for(let j=1;j<=count;j++){
+              sequenceNumber.push(currentSequence[i-1]+j);   
+            }
+           
+        }
+       
     }
-}
+    console.log(sequenceNumber);
+   
+    
 
-nextNum([5,2,4,3,8]);
+}
+nextNumber([1,2,6]);
