@@ -1,5 +1,6 @@
 function nextNumber(currentSequence:number[]){
-    var currentSequence=currentSequence.sort();
+    var currentSequence=currentSequence.sort((a,b)=>a-b);
+   
     var sequenceNumber:number[]=[currentSequence[0]];
     for(let i=1;i<=currentSequence.length;i++){
         
@@ -22,4 +23,5 @@ function nextNumber(currentSequence:number[]){
     
 
 }
-nextNumber([1,2,6]);
+nextNumber([6,7,10,5,18]);
+nextNumber([1,2,6,9]);

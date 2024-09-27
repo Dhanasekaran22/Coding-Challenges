@@ -1,5 +1,5 @@
 function nextNumber(currentSequence) {
-    var currentSequence = currentSequence.sort();
+    var currentSequence = currentSequence.sort(function (a, b) { return a - b; });
     var sequenceNumber = [currentSequence[0]];
     for (var i = 1; i <= currentSequence.length; i++) {
         if (currentSequence[i] - currentSequence[i - 1] === 1) {
@@ -14,4 +14,5 @@ function nextNumber(currentSequence) {
     }
     console.log(sequenceNumber);
 }
-nextNumber([1, 2, 6]);
+nextNumber([6, 7, 10, 5, 18]);
+nextNumber([1, 2, 6, 9]);
