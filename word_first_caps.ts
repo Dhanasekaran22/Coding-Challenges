@@ -12,11 +12,10 @@ for(let i=0;i<words.length;i++){
         let j=0;
         let temp:string[]=words[i].split('');
         temp[j]=temp[j].toUpperCase();
-        temp[j]=temp.join();
-        console.log(temp);
+        temp[j]=temp.join("");
         words[i]=temp[j];
         temp=[];
     }
 }
 
-console.log(words);
+console.log(words.join(" "));

@@ -9,11 +9,9 @@ for (var i = 0; i < words.length; i++) {
         var j = 0;
         var temp = words[i].split('');
         temp[j] = temp[j].toUpperCase();
-        temp[j] = temp.join();
-        console.log(temp);
+        temp[j] = temp.join("");
         words[i] = temp[j];
         temp = [];
     }
 }
-var res = words.join();
-console.log(res);
+console.log(words.join(" "));
