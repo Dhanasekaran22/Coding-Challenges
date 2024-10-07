@@ -26,8 +26,6 @@ let lastIndex = -1;
 
 
 let getNum: string[] = numb.split("");
-console.log(getNum);
-
 for (let i = 0; i < getNum.length; i++) {
     if (getNum[i] === searchElement) {
         lastIndex = i; 
