@@ -12,15 +12,12 @@
 // console.log(getNum.indexOf(1));
 var prom = require('prompt-sync')();
 var numb = prom("Enter the number: ");
-var searchElement = "1"; // Search for the string "1"
-var lastIndex = -1; // Initialize lastIndex to -1 to indicate not found
-// Convert the input number to an array of digits (as strings)
+var searchElement = "1";
+var lastIndex = -1;
 var getNum = numb.split("");
-console.log(getNum);
-// Loop through the array to find the last occurrence of "1"
 for (var i = 0; i < getNum.length; i++) {
     if (getNum[i] === searchElement) {
-        lastIndex = i; // Update lastIndex whenever "1" is found
+        lastIndex = i;
     }
 }
 console.log(lastIndex);
