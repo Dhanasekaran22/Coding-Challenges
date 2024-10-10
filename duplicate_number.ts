@@ -7,7 +7,8 @@ for(let i=0;i<get_input.length;i++){
 }
 
 
-const filterElements=duplicateElement.filter(num=>
-    num%2==0
+const filterElements=duplicateElement.filter((element,index)=>{
+    return duplicateElement.indexOf(element)==index
+}
 )
-console.log(filterElements);
+console.log("The Original Elements are ",filterElements.join(" "));
