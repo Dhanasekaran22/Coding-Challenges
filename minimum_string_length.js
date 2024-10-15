@@ -23,14 +23,26 @@ Explanation: We cannot do any operations on the string so the length remains the
 function findMinimumStringLength(element) {
     element = element.toUpperCase();
     var substring = "";
-    for (var i = 0; i < element.length; i++) {
-        if (element.charCodeAt(i) + 1 === element.charCodeAt(i + 1)) {
-            i++;
+    var resultantString = "";
+    while (true) {
+        for (var i = 0; i < element.length; i++) {
+            var foundPair = false;
+            if (element.charCodeAt(i) + 1 === element.charCodeAt(i + 1)) {
+                i++;
+            }
+            else {
+                substring += element[i];
+            }
+        }
+        if (element.length == substring.length) {
+            break;
         }
         else {
-            substring += element[i];
+            element = substring;
+            substring = "";
         }
     }
     console.log(substring);
+    console.log(substring.length);
 }
 findMinimumStringLength("ABFCACDB");

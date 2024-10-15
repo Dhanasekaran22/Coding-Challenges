@@ -21,19 +21,34 @@ Output: 5
 Explanation: We cannot do any operations on the string so the length remains the same.
 */
 
-function findMinimumStringLength(element:string){
-    element=element.toUpperCase();
-    let substring="";
-    for(let i=0;i<element.length;i++){
-        
-        if(element.charCodeAt(i)+1===element.charCodeAt(i+1)){
-            i++;
+function findMinimumStringLength(element: string) {
+    element = element.toUpperCase();
+    let substring = "";
+    let resultantString = "";
+    
+    while (true) {
+        for (let i = 0; i < element.length; i++) {
+            let foundPair = false;
+            if (element.charCodeAt(i) + 1 === element.charCodeAt(i + 1)) {
+                i++;
+            }
+            else {
+                substring += element[i];
+            }
         }
-        else{
-            substring+=element[i];
+        
+        
+        if(element.length == substring.length){
+            break;
+        }else{
+            element=substring;
+            substring="";
         }
     }
     console.log(substring);
+    console.log(substring.length);
+
 }
+
 
 findMinimumStringLength("ABFCACDB")
