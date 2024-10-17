@@ -1,10 +1,9 @@
 var Input = require('prompt-sync')();
 var get_input = Input("Enter the number: ");
-var duplicateElement = [];
-for (var i = 0; i < get_input.length; i++) {
-    duplicateElement.push(get_input[i]);
-}
+console.log(typeof (get_input));
+var duplicateElement = get_input.split('').map(Number);
+console.log(duplicateElement);
 var filterElements = duplicateElement.filter(function (element, index) {
     return duplicateElement.indexOf(element) == index;
 });
-console.log("The Original Elements are ", filterElements.join(" "));
+console.log("The Original Elements are ", filterElements);

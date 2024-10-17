@@ -1,14 +1,12 @@
 const Input=require('prompt-sync')();
 const get_input=Input("Enter the number: ");
-let duplicateElement:number[]=[];
+console.log(typeof(get_input));
 
-for(let i=0;i<get_input.length;i++){
-    duplicateElement.push(get_input[i]);
-}
-
+let duplicateElement:number[]=get_input.split('').map(Number);
+console.log(duplicateElement);
 
 const filterElements=duplicateElement.filter((element,index)=>{
     return duplicateElement.indexOf(element)==index
 }
 )
-console.log("The Original Elements are ",filterElements.join(" "));
+console.log("The Original Elements are ",filterElements);
