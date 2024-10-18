@@ -1,6 +1,6 @@
-// const get_input_=require('prompt-sync')();
-// const enterMarks=get_input_("Enter the 5 subject Marks: ");
-// const arrayOfMarks=enterMarks.split(',').map(Number);
+const get_input_=require('prompt-sync')();
+const enterMarks=get_input_("Enter the 5 subject Marks: ");
+const arrayOfMarks=enterMarks.split(',').map(Number);
 
 
 function tofindGrade(element:number[]){
@@ -34,4 +34,4 @@ function tofindGrade(element:number[]){
     
 } 
 
-console.log(tofindGrade([50,50,50,50,50]));
+console.log(tofindGrade(arrayOfMarks));
