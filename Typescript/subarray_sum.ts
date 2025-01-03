@@ -10,7 +10,7 @@ Input: nums = [1,2,3], k = 3
 Output: 2
 */
 
-const subArraySum = (element: number[], target: number) :number=> {
+const subArraySum = (element: number[], target: number) => {
     let count = 0;
     for (let i = 0; i < element.length ; i++) {
         let sum = 0;
