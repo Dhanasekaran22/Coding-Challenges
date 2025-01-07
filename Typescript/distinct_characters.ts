@@ -21,7 +21,7 @@ function countConsistentWords(words: string[], allowed: string){
         for(let i=0;i<word.length;i++){
             if(!allowed.includes(word[i])){
                 isChecked=false;
-                break;
+                break
             }
         }
         if(isChecked){
