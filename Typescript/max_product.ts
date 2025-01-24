@@ -26,5 +26,5 @@ const maxProduct = (element: number[]): number=> {
     }
     return result;
 }
-console.log(maxProduct([1,5,2,9]));
+console.log(maxProduct([1,5,2,9,10]));
 console.log(maxProduct([-10, -3, 5, 6, -2]));
