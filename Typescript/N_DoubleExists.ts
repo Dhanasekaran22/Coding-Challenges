@@ -32,4 +32,4 @@ function doubleExists(elements:number[]):boolean{
 }
 console.log(doubleExists([2,5,3,0]))        
 console.log(doubleExists([10,2,5,3,0]))
-console.log(doubleExists([3,1,7,11,0,0]));
+console.log(doubleExists([3,1,7,11,0,0,0]));
